@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+
+// protocal file for gprc
+service LivePlayer{
+  rpc LiveStream(Types) returns (Results) {}
+}
+
+// input data type
+message Types {
+  string type = 1;
+}
+
+// output data type
+message Results {
+  int32 result_number = 1;
+}
